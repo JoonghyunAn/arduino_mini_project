@@ -1,6 +1,6 @@
 int potenVal;
 int delayTime = 100;
-int potenPin = A0;
+int potenPin = A1;
 int redPin = 7;
 
 
@@ -16,9 +16,9 @@ potenVal = analogRead(potenPin);
 Serial.println(potenVal);
 delay(delayTime);
 
-while(potenVal>1000){
+while(potenVal>=1000){
   digitalWrite(redPin, HIGH);
-  potenVal=analogRead(potenPin);
+  potenVal = analogRead(potenPin);
   delay(delayTime);
 }
 digitalWrite(redPin,LOW);
